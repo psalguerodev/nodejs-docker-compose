@@ -1,0 +1,19 @@
+version: '3'
+services:
+  apinodejs:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: apinodejs
+    ports:
+      - "3001:3000"
+    expose: 
+      - "3000"
+    deploy:
+      mode: replicated
+      replicas: 5
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure

@@ -1,0 +1,17 @@
+
+> nodejs-sample@1.0.0 start /application
+> node index.js
+
+
+  _   _           _            _ ____  
+ | \ | | ___   __| | ___      | / ___| 
+ |  \| |/ _ \ / _` |/ _ \  _  | \___ \ 
+ | |\  | (_) | (_| |  __/ | |_| |___) |
+ |_| \_|\___/ \__,_|\___|  \___/|____/ 
+          Patrick Salguero
+--------------------------------------
+Application Name: nodejs-sample
+Version:          1.0.0
+Port:             3000
+Hostname          705f2953d2e1
+Url:              http://localhost:3000/
