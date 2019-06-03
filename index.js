@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -12,7 +12,9 @@ app.use((req, res, next) => {
 });
 
 app.use('/api', (rquest, response) => {
-  const welcomeResponse = require('./welcome.json');
+  const welcomeResponse = require('./welcome');
+  const os = require('os');
+  welcomeResponse.hostname = os.hostname();
   response.status(200).json(welcomeResponse);
 });
 

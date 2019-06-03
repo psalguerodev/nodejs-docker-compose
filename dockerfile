@@ -10,7 +10,7 @@ RUN npm install --quiet
 
 COPY . .
 
-EXPOSE 3000 3001 3002
+EXPOSE 80 3000 3001 3002
 
 ENTRYPOINT [ "npm", "start" ]
 
