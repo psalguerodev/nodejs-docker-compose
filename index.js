@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -22,6 +22,7 @@ app.listen(PORT, () => {
   const fs = require('fs');
   const colors = require('colors');
   const os = require('os');
+  const bcryptjs = require('bcryptjs');
   const banner = fs.readFileSync('./banner.txt', { encoding: 'UTF-8' });
 
   console.log(colors.blue(banner));
@@ -31,5 +32,6 @@ app.listen(PORT, () => {
   console.log(`Port:             ${colors.cyan(PORT)}`);
   console.log(`Hostname          ${colors.red(os.hostname())}`);
   console.log(`Url:              http://localhost:${PORT}/`);
+  console.log(`BcryptJS ${bcryptjs.hashSync('psalguero', 10)}`)
 
 });
